@@ -1,12 +1,14 @@
+
+
 // Funzione che ritorna 5 numeri casuali in un array
-function fiveNum() {
+
   var arrNum = [];
   for (i=0; i<5; i++) {
     var numGen = numRandom(1, 10);
     arrNum.push(numGen);
-  };
-  return arrNum;
 }
+
+console.log(arrNum);
 
 // Funzione per generare numero casuale dato un numero minimo e uno massimo
 function numRandom(numMin, numMax) {
@@ -18,15 +20,15 @@ function numRandom(numMin, numMax) {
 function numUtente() {
   var arrUtente = [];
   var arrSbagliati = [];
-  var numeri = fiveNum();
-  while (i<5) {
+  var i = 0;
+  while (i < 5) {
     var richiesta = parseInt(prompt("Inserisci numero:"));
     if (isNaN(richiesta) || richiesta == 0 || richiesta == "") {
-    var richiesta = parseInt(prompt("Inserisci numero:"));
+    alert("Devi inserire un valore numerico. Riprova:");
     i--;
-  } else if (validatore(numeri, richiesta) == false) {
+  } else if (validatore(arrNum, richiesta) == false) {
     arrSbagliati.push(richiesta);
-  } else if (validatore(numeri, richiesta) == true) {
+  } else if (validatore(arrNum, richiesta) == true) {
     arrUtente.push(richiesta);
   }
   i++;
@@ -34,15 +36,6 @@ function numUtente() {
   return arrUtente;
 };
 
-
-
-function risultato() {
-  var computer = fiveNum();
-  var utente = numUtente();
-  for (i=0; i<5; i++) {
-    if ()
-  }
-};
 
 // Funzione per verificare che un numero non sia presente in un array
 function validatore(array, elemento) {
@@ -54,8 +47,8 @@ function validatore(array, elemento) {
       }
     i++;
   }
-  ret
+  return numeroUguale;
+};
 
-// Prova
-var check = console.log(fiveNum());
-var check2 = console.log(numUtente());
+
+console.log(numUtente());
