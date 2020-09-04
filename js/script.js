@@ -17,16 +17,24 @@ function numRandom(numMin, numMax) {
 // Funzione per permettere all'utente di inserire 5 numeri
 function numUtente() {
   var arrUtente = [];
-  for (i=0; i<5; i++) {
+  var arrSbagliati = [];
+  var numeri = fiveNum();
+  while (i<5) {
     var richiesta = parseInt(prompt("Inserisci numero:"));
     if (isNaN(richiesta) || richiesta == 0 || richiesta == "") {
     var richiesta = parseInt(prompt("Inserisci numero:"));
-  } else {
+    i--;
+  } else if (validatore(numeri, richiesta) == false) {
+    arrSbagliati.push(richiesta);
+  } else if (validatore(numeri, richiesta) == true) {
     arrUtente.push(richiesta);
   }
+  i++;
 }
   return arrUtente;
 };
+
+
 
 function risultato() {
   var computer = fiveNum();
@@ -35,6 +43,18 @@ function risultato() {
     if ()
   }
 };
+
+// Funzione per verificare che un numero non sia presente in un array
+function validatore(array, elemento) {
+  var numeroUguale = false;
+  var i = 0;
+    while (i < array.length && numeroUguale == false) {
+      if (array[i] == elemento) {
+        numeroUguale = true;
+      }
+    i++;
+  }
+  ret
 
 // Prova
 var check = console.log(fiveNum());
