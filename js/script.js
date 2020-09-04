@@ -1,7 +1,16 @@
 $(document).ready(function() {
  alert(arrNum);
- var check = numUtente();
- var counter = countdown();
+  var check = numUtente();
+  var tempo = document.getElementById("t");
+  var seconds=30;
+    setInterval(function() {
+      seconds--;
+      tempo.innerHTML=seconds;
+      if (seconds<0) {
+        clearInterval();
+        seconds=30;
+      }
+    },1000);
 });
 
 // Funzione che ritorna 5 numeri casuali in un array
