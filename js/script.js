@@ -1,6 +1,7 @@
 $(document).ready(function() {
  alert(arrNum);
-var check = numUtente();
+ var check = numUtente();
+ var counter = countdown();
 });
 
 // Funzione che ritorna 5 numeri casuali in un array
@@ -47,6 +48,7 @@ function numUtente() {
   }
   i++;
 }
-  return arrUtente;
+  document.getElementById("quanti").innerHTML=arrUtente.length;
+  document.getElementById("quali").innerHTML=arrUtente;
 }, 3000);
 };

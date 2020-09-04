@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+.display_bl {
+  display: block;
+}
+
+.m_top_100 {
+  margin-top: 100px;
+}
+
 .countdown {
   width: 100vw;
   height: 100vh;
@@ -23,4 +31,30 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.quanti {
+  width: 150px;
+  height: 50px;
+  border: 2px solid red;
+  border-radius: 5px;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  text-align: center;
+}
+
+.quali {
+  width: 150px;
+  height: 50px;
+  border: 2px solid red;
+  border-radius: 5px;
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  text-align: center;
 }
