@@ -1,12 +1,14 @@
+// Funzioni che verranno eseguite all'apertura della pagina
 $(document).ready(function() {
  alert(arrNum);
   var check = numUtente();
+  // Countdown di 30 sec che verrà stampato a video
   var tempo = document.getElementById("t");
   var seconds=30;
     setInterval(function() {
       seconds--;
       tempo.innerHTML=seconds;
-      if (seconds<0) {
+      if (seconds==0) {
         clearInterval();
         seconds=30;
       }
@@ -16,7 +18,7 @@ $(document).ready(function() {
 // Funzione che ritorna 5 numeri casuali in un array
 var arrNum = [];
   for (i=0; i<5; i++) {
-    var numGen = numRandom(1, 10);
+    var numGen = numRandom(1, 100);
     arrNum.push(numGen);
 }
 
