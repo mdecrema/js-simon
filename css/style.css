@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.countdown {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
+  position: relative;
+}
+
+.tempo {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 3px solid red;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

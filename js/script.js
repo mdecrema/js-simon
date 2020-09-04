@@ -14,5 +14,28 @@ function numRandom(numMin, numMax) {
   return num;
 };
 
-// Prova 
-var check = alert(fiveNum());
+// Funzione per permettere all'utente di inserire 5 numeri
+function numUtente() {
+  var arrUtente = [];
+  for (i=0; i<5; i++) {
+    var richiesta = parseInt(prompt("Inserisci numero:"));
+    if (isNaN(richiesta) || richiesta == 0 || richiesta == "") {
+    var richiesta = parseInt(prompt("Inserisci numero:"));
+  } else {
+    arrUtente.push(richiesta);
+  }
+}
+  return arrUtente;
+};
+
+function risultato() {
+  var computer = fiveNum();
+  var utente = numUtente();
+  for (i=0; i<5; i++) {
+    if ()
+  }
+};
+
+// Prova
+var check = console.log(fiveNum());
+var check2 = console.log(numUtente());
