@@ -50,5 +50,5 @@ function numUtente() {
 }
   document.getElementById("quanti").innerHTML=arrUtente.length;
   document.getElementById("quali").innerHTML=arrUtente;
-}, 3000);
+}, 30000);
 };
